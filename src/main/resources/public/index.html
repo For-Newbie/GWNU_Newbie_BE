@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 대시보드</title>
+    <link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>관리자 대시보드</h1>
+            <h1>GWNU Newbie</h1>
+            <h1>
+                <a href="#" id="loginBtn" class="btn-login">로그인</a>
+            </h1>
+        </div>
+    </header>
+    <main>
+        <div class="dashboard">
+            <div class="card">
+                <h2>학과별 졸업 이수 기준</h2>
+                <p>졸업 요건 정보 관리</p>
+                <a href="/graduation" class="btn">관리하기</a>
+            </div>
+            <div class="card">
+                <h2>동아리 정보</h2>
+                <p>동아리 목록 및 상세 정보 관리</p>
+                <a href="/clubs" class="btn">관리하기</a>
+            </div>
+            <div class="card">
+                <h2>학사일정</h2>
+                <p>학사 일정 및 이벤트 관리</p>
+                <a href="/calendar" class="btn">관리하기</a>
+            </div>
+            <div class="card">
+                <h2>커뮤니티 서비스</h2>
+                <p>커뮤니티 게시판 관리</p>
+                <a href="/community" class="btn">관리하기</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- 로그인 모달 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>로그인</h2>
+            <form id="loginForm">
+                <div>
+                    <label for="username">아이디:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div>
+                    <label for="password">비밀번호:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" id="closeModal" class="btn btn-secondary">돌아가기</button>
+                    <button type="submit" class="btn">로그인</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/modal-login.js"></script>
+</body>
+</html>
