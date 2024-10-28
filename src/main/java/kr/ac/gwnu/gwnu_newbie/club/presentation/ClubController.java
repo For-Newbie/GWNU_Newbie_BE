@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/clubs")
 @RequiredArgsConstructor
-public class ClubController {
+public class ClubController implements ClubControllerSwagger {
 
     private final ClubService clubService;
 
