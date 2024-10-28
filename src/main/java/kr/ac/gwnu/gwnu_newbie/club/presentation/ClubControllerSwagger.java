@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 @Tag(name = "Product", description = "**동아리 정보 API**")
 public interface ClubControllerSwagger {
 
-    @Operation(summary = "카테고리", description = "카테고리 API")
+    @Operation(summary = "동아리 전체", description = "동아리 전체 정보 API")
     @ApiResponses({
             @ApiResponse(responseCode = "body", description = "응답 메시지 예시",
                     content = @Content(schema = @Schema(implementation = Club.class))),
