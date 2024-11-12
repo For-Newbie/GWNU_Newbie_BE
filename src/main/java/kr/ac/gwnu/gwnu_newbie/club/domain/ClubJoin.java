@@ -9,7 +9,10 @@ import lombok.Getter;
 public class ClubJoin {
 
     @Id
-    @OneToOne
+    private Long id;
+
+    @OneToOne(fetch = FetchType.LAZY)
+    @MapsId
     @JoinColumn(name = "club_id", nullable = false)
     private Club club;
 
