@@ -27,4 +27,9 @@ public class ClubController implements ClubControllerSwagger {
     public ResponseEntity<ResponseDto> getClubsByCategory(@PathVariable String category) {
         return ResponseUtil.createSuccessResponse(clubService.getClubsByCategory(category));
     }
+
+    @GetMapping("/detail/{clubId}")
+    public ResponseEntity<ResponseDto> getClubDetail(@PathVariable Long clubId) {
+        return ResponseUtil.createSuccessResponse(clubService.getClubDetail(clubId));
+    }
 }

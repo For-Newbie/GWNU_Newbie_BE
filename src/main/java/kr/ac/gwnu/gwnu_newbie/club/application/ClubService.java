@@ -26,4 +26,10 @@ public class ClubService {
                 .map(ClubResponseDto::from)
                 .toList();
     }
+
+    public ClubResponseDto getClubDetail(Long clubId) {
+        return clubRepository.findById(clubId)
+                .map(ClubResponseDto::from)
+                .orElseThrow(() -> new RuntimeException("해당 동아리를 찾을 수 없습니다."));
+    }
 }
