@@ -19,7 +19,8 @@ public class SwaggerConfig {
     public List<GroupedOpenApi> apis() {
         return List.of(
                 createGroupedOpenApi("동아리 API", "/clubs/**"),
-                createGroupedOpenApi("학사 일정 API", "/schedules/**")
+                createGroupedOpenApi("학사 일정 API", "/schedules/**"),
+                createGroupedOpenApi("졸업 이수 API", "/graduates/**")
         );
     }
 
