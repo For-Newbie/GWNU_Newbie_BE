@@ -1,13 +1,16 @@
 package kr.ac.gwnu.gwnu_newbie.community.domain;
 
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Table(name = "post")
+@NoArgsConstructor
 public class Post {
 
     @Id
@@ -33,4 +36,15 @@ public class Post {
 
     @Column(name = "category_name", nullable = false, length = 30)
     private String categoryName;
+
+    @Builder
+    private Post(User user, String postTitle, String postContent,
+                 LocalDateTime postCreatedAt, LocalDateTime postUpdatedAt, String categoryName) {
+        this.user = user;
+        this.postTitle = postTitle;
+        this.postContent = postContent;
+        this.postCreatedAt = postCreatedAt;
+        this.postUpdatedAt = postUpdatedAt;
+        this.categoryName = categoryName;
+    }
 }
